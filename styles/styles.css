@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+   
+}
+
+/* Modalita senza background-image */
+.bg-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Modalita con background-image */
+/* .bg-img  {
+    position: absolute;
+    background-image: url(/img/105a97cef7ebd4016bf99b3b171f3967.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+} */
+
+/* Modalita con contenitore padre su position absolute con immagine di size 100% e display block */
+/* .bg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
