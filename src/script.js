@@ -18,8 +18,8 @@ const restartButton = document.createElement('button')
 let playerAttack
 let enemyAttack
 let resultCombat
-let mokeponPlayerLife = 3
-let mokeponEnemyLife = 3
+let mokeponPlayerLife = 8
+let mokeponEnemyLife = 8
 
 
 attackSelect.style.display='none'

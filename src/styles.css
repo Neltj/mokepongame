@@ -6,14 +6,15 @@
 
 body {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
    
 }
 
+
 /* Modalita senza background-image */
 .bg-img {
-    position: absolute;
-    height: 100%;
+    position: fixed;
+    min-height: 100%;
     width: 100%;
     z-index: -1;
     object-fit: cover;
@@ -45,3 +46,13 @@ body {
     height: 100%;
     object-fit: cover;
 } */
+
+.main-content {
+    width: 86%;
+    margin: 0 auto;
+    background-color: rgba(240, 248, 255, 0.125);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px 0;
+}
