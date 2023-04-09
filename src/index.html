@@ -62,18 +62,16 @@
         
 
 
-        <button type="button" id="btn-mokepon">Selezionare</button>
+        <button type="button" id="btn-mokepon" class="btn-start">Combatti</button>
 
 
     </section>
 
     
 
-    <section id="selezionare-attacco">
+    <section id="selezionare-attacco" class="battle-init">
 
-        <p>Il tuo <span id="mokepon-player"></span> ha <span id="mokepon-player-life">3</span> vite</p>
-
-        <p><span id="mokepon-enemy-player"></span> avversario ha <span id="mokepon-enemy-life">3</span> vite</p>
+        <p>Scegli un attacco</p>
 
         <div>
             <button type="button" id="btn-fire">Fuoco 🔥</button>
@@ -82,9 +80,17 @@
         </div>
 
 
-    </section>
+        <div>
+            <section id="messaggi"></section>
+            <section id="combat-again"></section>
+        </div>
 
-    <section id="messaggi"></section>
+        <div>
+            <p>Il tuo <span id="mokepon-player"></span> ha <span id="mokepon-player-life">5</span> vite</p>
+            <p><span id="mokepon-enemy-player"></span> avversario ha <span id="mokepon-enemy-life">5</span> vite</p>
+        </div>
+        
+    </section>
 
     <section>
         <p id="player-mokepon"></p>
@@ -92,7 +98,8 @@
         <p id="final-result-game"></p>
     </section>
 
-    <section id="combat-again"></section>
+
+
 
 
 </main>

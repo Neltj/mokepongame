@@ -8,6 +8,7 @@
 
     --title-font: 'Wallpoet', cursive;
     --game-font: 'Roboto Serif', serif;
+    --font-size: 62.5%
 }
 
 
@@ -16,7 +17,8 @@ body {
     position: absolute;
     /* min-height: 100vh; */
     width: 100%;
-    font-family: var(--game-font)
+    font-family: var(--game-font);
+    font-size: var(--font-size);
 }
 
 
@@ -31,30 +33,36 @@ body {
 
 .main-content .title {
     font-family: var(--title-font);
+    font-size: 3.3rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-shadow: 1px 2px 1px white;
 }
 
 .main-content {
-    background-color: rgba(240, 248, 255, 0.125);
+    background-color: rgba(240, 248, 255, 0.044);
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 80px 0;
+    padding: 50px 0 30px;
     margin: 20px auto;
 }
 
 
 .choice-mokepon-title{
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 20px;
+    color: rgb(238, 224, 201);
+    font-size: 1.4rem;
+
 }
 
 .mokepons {
     display: flex;
     /* background-color: aqua ; */
     margin: 20px 0px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 30px;
 }
 
 .mokepons label {
@@ -64,17 +72,42 @@ body {
    width: 100px;
    padding: 10px;
    border: 1px solid;
+   border-radius: 10px;
    
 }
 
+.mokepons label p {
+    color: aliceblue;
+    font-size: 1rem;
+
+}
+
 .mokepons label img {
-    width: 50px;
+    display: block;
+    width: 80px;
+    margin: 10px 0;
 }
 
 .mokepons label input {
     width: 16px;
     height: 16px;
+    
 }
+
+.btn-start {
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+    border: 1px solid skyblue;
+    font-weight: 700;
+    border-radius: 3px;
+    font-family: var(--game-font);
+    font-size: .9rem;
+}
+
+/* .battle-init {
+    
+} */
 
 /* .mokepons input {
     display: none;
