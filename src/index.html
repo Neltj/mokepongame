@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+
     <title>MOKEPON STADIUM</title>
 
     
@@ -12,7 +17,7 @@
 <body>
 
     
-        <img src="../img/v9v3d5s4cfu91.jpg" class="bg-img" alt="">
+    <img src="../img/v9v3d5s4cfu91.jpg" class="bg-img" alt="">
   
     
     <!-- <img class="bg-img" alt=""> -->
@@ -23,20 +28,38 @@
 
 <main class="main-content">
 
-    <h1>Mokepon Battle🔥💧🌿</h1>
+    <h1 class="title">Mokepòn Battle</h1>
 
     <section id="selezionare-mokepon">
 
-        <h2>Scegli il tuo Mokepon:</h2>
+        <h2 class="choice-mokepon-title">Scegli il tuo Mokepòn:</h2>
 
-        <label for="letezio">Letezio</label>
-        <input type="radio" name="Mokepon" id="letezio">
+        <section class="mokepons">
 
-        <label for="ganjus">Ganjus</label>
-        <input type="radio" name="Mokepon" id="ganjus">
+          
+            <label for="letezio">
+                <p>Hypodoge</p>
+                <img src="../img/mokepons_mokepon_hipodoge_attack.png" alt="">
+                <input type="radio" name="Mokepon" id="letezio">
+            </label>
+            <!-- <input type="radio" name="Mokepon" id="letezio"> -->
+          
+            <label for="ganjus">
+                <p>Canganjus</p>
+                <img src="../img/mokepons_mokepon_capipepo_attack.png" alt="">
+                <input type="radio" name="Mokepon" id="ganjus">
+            </label>
+            <!-- <input type="radio" name="Mokepon" id="ganjus"> -->
         
-        <label for="enisgas">Enisgas</label>
-        <input type="radio" name="Mokepon" id="enisgas">
+            <label for="enisgas">
+                <p>Ratigueya</p>
+                <img src="../img/mokepons_mokepon_ratigueya_attack.png" alt="">
+                <input type="radio" name="Mokepon" id="enisgas">
+            </label>
+            <!-- <input type="radio" name="Mokepon" id="enisgas"> -->
+
+        </section>
+        
 
 
         <button type="button" id="btn-mokepon">Selezionare</button>
