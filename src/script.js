@@ -15,6 +15,10 @@ const combatAgain = document.querySelector('#combat-again')
 const restartButton = document.createElement('button')
 
 
+const mokepon1 = 'Hypodoge'
+const mokepon2 = 'Canganjus'
+const mokepon3 = 'Ratigueya'
+
 let playerAttack
 let enemyAttack
 let resultCombat
@@ -38,11 +42,11 @@ function mokeponChoicePlayer() {
     attackSelect.style.display= 'block'
 
     if(inputLetezio.checked){
-        mokeponPlayer.innerHTML = 'Letezio'
+        mokeponPlayer.innerHTML = mokepon1
     }else if (inputGanjus.checked) {
-        mokeponPlayer.innerHTML = 'Ganjus'
+        mokeponPlayer.innerHTML =  mokepon2
     }else if (inputEnisgas.checked) {
-        mokeponPlayer.innerHTML = 'Enisgas'
+        mokeponPlayer.innerHTML = mokepon3
     }else {
 
         alert('Scegli un Mokepon altrimenti devi andarci tu!')
@@ -62,28 +66,28 @@ function mokeponChoiceEnemy () {
 
     if(mokeponAleatorio == 1) {
         //Letizio
-        mokeponEnemyPlayer.innerHTML = 'Letezio'
+        mokeponEnemyPlayer.innerHTML = mokepon1
     }else if (mokeponAleatorio == 2) {
         //Ganjus
-        mokeponEnemyPlayer.innerHTML = 'Ganjus'
+        mokeponEnemyPlayer.innerHTML = mokepon2
     }else {
         //Enisgas
-        mokeponEnemyPlayer.innerHTML = 'Enisgas'   
+        mokeponEnemyPlayer.innerHTML = mokepon3
     }
 }
 
 function fireAttack () {
-    playerAttack = 'FIRE'
+    playerAttack = '🔥'
     enemyAttackAleatorio()
 }
 
 function waterAttack () {
-    playerAttack = 'WATER'
+    playerAttack = '💧'
     enemyAttackAleatorio()
 }
 
 function plantAttack () {
-    playerAttack = 'PLANT'
+    playerAttack = '🌿'
     enemyAttackAleatorio()
 }
 
@@ -93,11 +97,11 @@ function enemyAttackAleatorio () {
     let attackAleatorio = aleatorio(1, 3)
 
     if (attackAleatorio == 1) {
-        enemyAttack = 'FIRE'
+        enemyAttack = '🔥'
     }else if (attackAleatorio == 2) {
-        enemyAttack = 'WATER'
+        enemyAttack = '💧'
     }else {
-        enemyAttack = 'PLANT'
+        enemyAttack = '🌿'
     }
 
     combat()
@@ -109,7 +113,7 @@ function combat () {
 
         createMessage('Tie')
 
-    } else if((playerAttack == 'FIRE' && enemyAttack == 'PLANT') || (playerAttack == 'WATER' && enemyAttack == 'FIRE') || (playerAttack == 'PLANT' && enemyAttack == 'WATER')){
+    } else if((playerAttack == '🔥' && enemyAttack == '🌿') || (playerAttack == '💧' && enemyAttack == '🔥') || (playerAttack == '🌿' && enemyAttack == '💧')){
 
         createMessage('You win')
 
@@ -165,14 +169,19 @@ function createMessage (resultCombat) {
     let sectionMessage = document.querySelector('#messaggi')
     
     let message = document.createElement('p')
+    let message2 = document.createElement('p')
     let messageRisult = document.createElement('p')
-    message.innerHTML = `Il tuo mokepon usa ${playerAttack}. Il mokepon enemico usa ${enemyAttack}`
-
+    message.classList.add('player')
+    message2.classList.add('player')
+    messageRisult.classList.add('winner')
+    message.innerHTML = `Il tuo ${mokeponPlayer.textContent} usa ${playerAttack}.`
+    message2.innerHTML = `Il ${mokeponEnemyPlayer.textContent} nemico usa ${enemyAttack}.`     
 
     messageRisult.innerHTML = resultCombat
 
 
     sectionMessage.appendChild(message)
+    sectionMessage.appendChild(message2)
     sectionMessage.appendChild(messageRisult)
 }
 

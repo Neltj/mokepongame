@@ -31,12 +31,14 @@ body {
     object-fit: cover;
 }
 
-.main-content .title {
+.title {
     font-family: var(--title-font);
     font-size: 3.3rem;
     color: rgb(0, 0, 0);
     font-weight: 500;
     text-shadow: 1px 2px 1px white;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .main-content {
@@ -44,14 +46,13 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 50px 0 30px;
+    padding: 15px 0 30px;
     margin: 20px auto;
 }
 
 
 .choice-mokepon-title{
     font-weight: 500;
-    margin-top: 20px;
     color: rgb(238, 224, 201);
     font-size: 1.4rem;
 
@@ -105,9 +106,38 @@ body {
     font-size: .9rem;
 }
 
-/* .battle-init {
+.battle-init {
     
-} */
+}
+
+.battle-init .battle-init--title {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.battle-init .btn-container button {
+    margin: 20px 0px;
+    width: 80px;
+    height: 36px;
+    font-size: 1.2rem;
+}
+
+.battle-init .combat-messaggi section {
+    text-align: initial;
+}
+
+.battle-init .combat-messaggi section .player {
+    color:seashell;
+    font-size: 1rem;
+    font-weight: 300;
+  
+}
+
+.battle-init .combat-messaggi section .winner {
+    color: rgb(9, 9, 207);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
 /* .mokepons input {
     display: none;

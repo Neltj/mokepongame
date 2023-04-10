@@ -26,9 +26,11 @@
         <img src="/img/105a97cef7ebd4016bf99b3b171f3967.jpg" alt="">
     </figure> -->
 
+    <h1 class="title">Mokepòn Battle</h1>
+
 <main class="main-content">
 
-    <h1 class="title">Mokepòn Battle</h1>
+    
 
     <section id="selezionare-mokepon">
 
@@ -71,32 +73,37 @@
 
     <section id="selezionare-attacco" class="battle-init">
 
-        <p>Scegli un attacco</p>
+        <p class="battle-init--title">Scegli un attacco</p>
 
-        <div>
-            <button type="button" id="btn-fire">Fuoco 🔥</button>
-            <button type="button" id="btn-water">Acqua 💧</button>
-            <button type="button" id="btn-plant">Pianta 🌿</button>
+        <div class="btn-container">
+            <button type="button" id="btn-fire">🔥</button>
+            <button type="button" id="btn-water">💧</button>
+            <button type="button" id="btn-plant">🌿</button>
         </div>
 
 
-        <div>
-            <section id="messaggi"></section>
+        <section class="end-game-results">
+            <p id="player-mokepon"></p>
+            <p id="enemy-mokepon"></p>
+            <p id="final-result-game"></p>
             <section id="combat-again"></section>
+        </section>
+
+        <div class="mokepons-lifes"> 
+            <p class="player">Il tuo <span id="mokepon-player"></span> ha <span id="mokepon-player-life">5</span> vite</p>
+            <p class="enemy"><span id="mokepon-enemy-player"></span> avversario ha <span id="mokepon-enemy-life">5</span> vite</p>
         </div>
 
-        <div>
-            <p>Il tuo <span id="mokepon-player"></span> ha <span id="mokepon-player-life">5</span> vite</p>
-            <p><span id="mokepon-enemy-player"></span> avversario ha <span id="mokepon-enemy-life">5</span> vite</p>
+
+        <div class="combat-messaggi">
+            <section id="messaggi"></section>
         </div>
+
+       
         
     </section>
 
-    <section>
-        <p id="player-mokepon"></p>
-        <p id="enemy-mokepon"></p>
-        <p id="final-result-game"></p>
-    </section>
+    
 
 
 
