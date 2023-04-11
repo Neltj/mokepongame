@@ -18,8 +18,7 @@
 
     
     <img src="../img/v9v3d5s4cfu91.jpg" class="bg-img" alt="">
-  
-    
+
     <!-- <img class="bg-img" alt=""> -->
 
     <!-- <figure class="bg-container">
@@ -30,8 +29,6 @@
 
 <main class="main-content">
 
-    
-
     <section id="selezionare-mokepon">
 
         <h2 class="choice-mokepon-title">Scegli il tuo Mokepòn:</h2>
@@ -39,31 +36,29 @@
         <section class="mokepons">
 
           
-            <label for="letezio">
+            <label for="letezio" class="bg-water">
                 <p>Hypodoge</p>
                 <img src="../img/mokepons_mokepon_hipodoge_attack.png" alt="">
                 <input type="radio" name="Mokepon" id="letezio">
             </label>
-            <!-- <input type="radio" name="Mokepon" id="letezio"> -->
+        
           
-            <label for="ganjus">
-                <p>Canganjus</p>
+            <label for="ganjus" class="bg-plant">
+                <p>Capipepo</p>
                 <img src="../img/mokepons_mokepon_capipepo_attack.png" alt="">
                 <input type="radio" name="Mokepon" id="ganjus">
             </label>
-            <!-- <input type="radio" name="Mokepon" id="ganjus"> -->
+          
         
-            <label for="enisgas">
+            <label for="enisgas" class="bg-fire">
                 <p>Ratigueya</p>
                 <img src="../img/mokepons_mokepon_ratigueya_attack.png" alt="">
                 <input type="radio" name="Mokepon" id="enisgas">
             </label>
-            <!-- <input type="radio" name="Mokepon" id="enisgas"> -->
+        
 
         </section>
         
-
-
         <button type="button" id="btn-mokepon" class="btn-start">Combatti</button>
 
 
@@ -73,7 +68,7 @@
 
     <section id="selezionare-attacco" class="battle-init">
 
-        <p class="battle-init--title">Scegli un attacco</p>
+        <p class="battle-init--title">Scegli un attacco:</p>
 
         <div class="btn-container">
             <button type="button" id="btn-fire">🔥</button>
@@ -91,24 +86,20 @@
 
         <div class="mokepons-lifes"> 
             <p class="player">Il tuo <span id="mokepon-player"></span> ha <span id="mokepon-player-life">5</span> vite</p>
-            <p class="enemy"><span id="mokepon-enemy-player"></span> avversario ha <span id="mokepon-enemy-life">5</span> vite</p>
+            <p class="enemy"><span id="mokepon-enemy-player"></span> nemico ha <span id="mokepon-enemy-life">5</span> vite</p>
         </div>
 
-
-        <div class="combat-messaggi">
-            <section id="messaggi"></section>
-        </div>
-
+    
+        
+        <section id="messaggi" class="resultati-messaggi">
+        
+        </section>
+     
        
         
     </section>
 
     
-
-
-
-
-
 </main>
     
 

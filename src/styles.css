@@ -42,9 +42,9 @@ body {
 }
 
 .main-content {
+    display: flex;
     background-color: rgba(240, 248, 255, 0.044);
     text-align: center;
-    display: flex;
     flex-direction: column;
     padding: 15px 0 30px;
     margin: 20px auto;
@@ -52,15 +52,16 @@ body {
 
 
 .choice-mokepon-title{
-    font-weight: 500;
-    color: rgb(238, 224, 201);
+    font-weight: 800;
+    color: rgb(255, 255, 255);
     font-size: 1.4rem;
+    background-color: rgba(0, 0, 0, 0.558);
+    padding: 10px 0;
 
 }
 
 .mokepons {
     display: flex;
-    /* background-color: aqua ; */
     margin: 20px 0px;
     justify-content: space-around;
     align-items: center;
@@ -70,23 +71,52 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 100px;
+   width: 110px;
    padding: 10px;
    border: 1px solid;
    border-radius: 10px;
+   color: whitesmoke;
    
 }
 
 .mokepons label p {
-    color: aliceblue;
     font-size: 1rem;
+    font-weight: 800;
+    text-decoration: underline;
+}
 
+.mokepons label:hover {
+    border-color: transparent;
+}
+
+.mokepons .bg-water:hover {
+    background-image: url(../img/bgwatercard.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* color: navy; */
+}
+
+.mokepons .bg-plant:hover {
+    background-image: url(../img/bgherbmokepon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* color: lime; */
+}
+
+.mokepons .bg-fire:hover {
+    background-image: url(../img/bgfire3mokepon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* color: crimson; */
 }
 
 .mokepons label img {
     display: block;
-    width: 80px;
-    margin: 10px 0;
+    width: 100px;
+    padding: 10px 0;
 }
 
 .mokepons label input {
@@ -96,52 +126,114 @@ body {
 }
 
 .btn-start {
-    width: 100px;
+    width: 120px;
     height: 30px;
-    background-color: aqua;
-    border: 1px solid skyblue;
-    font-weight: 700;
+    background-color: rgba(0, 255, 255, 0.458);
+    border: 1px solid rgb(2, 29, 40);
+    font-weight: bold;
     border-radius: 3px;
-    font-family: var(--game-font);
-    font-size: .9rem;
+    font-family: var(--title-font);
+    font-size: 1rem;
+    display: block;
+    margin-left: 50px;
 }
 
-.battle-init {
-    
-}
+/* .battle-init {
+   
+} */
+
+
 
 .battle-init .battle-init--title {
-    color: white;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
     font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.558);
+    padding: 10px 0;
 }
+
+.battle-init .btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
 
 .battle-init .btn-container button {
     margin: 20px 0px;
-    width: 80px;
-    height: 36px;
-    font-size: 1.2rem;
+    width: 100px;
+    padding: 10px;
+    font-size: 1.5rem;
+    background-color: #ffffff00;
+    border-color: transparent;
+    border-radius: 20px;
+    box-shadow: 10px 5px 20px inset rgb(30, 108, 122);
+    cursor: pointer;
+    border: 1px solid rgb(1, 16, 19);
+ 
 }
 
-.battle-init .combat-messaggi section {
+.battle-init .resultati-messaggi p {
     text-align: initial;
 }
 
-.battle-init .combat-messaggi section .player {
+.battle-init .resultati-messaggi .player {
     color:seashell;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 300;
   
 }
 
-.battle-init .combat-messaggi section .winner {
-    color: rgb(9, 9, 207);
-    font-size: 1.5rem;
-    font-weight: 500;
+.battle-init .resultati-messaggi .player img {
+    width: 60px;
 }
 
-/* .mokepons input {
+.battle-init .resultati-messaggi .winner {
+    text-align: center;
+    color: rgb(2, 4, 2);
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: beige;
+  
+}
+
+.mokepons-lifes {
+    margin-bottom: 20px;
+}
+
+.mokepons-lifes p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.mokepons-lifes p span:nth-child(2) {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    color: aqua;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.end-game-results {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.btn-restart-game {
+    display: inline-block;
+    color: navy;
+    font-weight: 700;
+    height: 30px;
+    padding: 2px 5px;
+    border: 4px groove white;
+    margin: 10px 0px;
+
+}
+.mokepons input {
     display: none;
-} */
+}
 
 /* Modalita con background-image */
 /* .bg-img  {

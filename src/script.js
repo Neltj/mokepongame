@@ -16,7 +16,7 @@ const restartButton = document.createElement('button')
 
 
 const mokepon1 = 'Hypodoge'
-const mokepon2 = 'Canganjus'
+const mokepon2 = 'Capipepo'
 const mokepon3 = 'Ratigueya'
 
 let playerAttack
@@ -111,11 +111,11 @@ function combat () {
 
     if(playerAttack == enemyAttack) {
 
-        createMessage('Tie')
+        createMessage('Pareggio🤍')
 
     } else if((playerAttack == '🔥' && enemyAttack == '🌿') || (playerAttack == '💧' && enemyAttack == '🔥') || (playerAttack == '🌿' && enemyAttack == '💧')){
 
-        createMessage('You win')
+        createMessage('Hai vinto!💘')
 
         mokeponEnemyLife--
     
@@ -124,7 +124,7 @@ function combat () {
     
     } else {
 
-        createMessage('You lose')
+        createMessage('Hai perso!💔')
      
         mokeponPlayerLife--
     
@@ -174,8 +174,27 @@ function createMessage (resultCombat) {
     message.classList.add('player')
     message2.classList.add('player')
     messageRisult.classList.add('winner')
-    message.innerHTML = `Il tuo ${mokeponPlayer.textContent} usa ${playerAttack}.`
-    message2.innerHTML = `Il ${mokeponEnemyPlayer.textContent} nemico usa ${enemyAttack}.`     
+
+    if(mokeponPlayer.textContent == mokepon1 && mokeponEnemyPlayer.textContent == mokepon2) {
+        message.innerHTML = `IL tuo <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `IL <img src="../img/mokepons_mokepon_capipepo_attack.png"> usa ${enemyAttack}`
+       
+       
+    }else if(mokeponPlayer.textContent == mokepon2 && mokeponEnemyPlayer.textContent == mokepon3) {
+        message.innerHTML = `IL tuo <img src="../img/mokepons_mokepon_capipepo_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `IL <img src="../img/mokepons_mokepon_ratigueya_attack.png"> usa ${enemyAttack}`
+       
+       
+    }else if(mokeponPlayer.textContent == mokepon3 && mokeponEnemyPlayer.textContent == mokepon1) {
+        message.innerHTML = `IL tuo <img src="../img/mokepons_mokepon_ratigueya_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `IL <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${enemyAttack}`
+
+    }else if(mokeponPlayer.textContent == mokeponEnemyPlayer.textContent) {
+
+        message.innerHTML = `Il tuo ${mokeponPlayer.textContent} usa ${playerAttack}.`
+        message2.innerHTML = `Il ${mokeponEnemyPlayer.textContent} nemico usa ${enemyAttack}.`     
+    }
+    
 
     messageRisult.innerHTML = resultCombat
 
@@ -188,7 +207,7 @@ function createMessage (resultCombat) {
 
 function restartButtonGame () {
 
-
+    restartButton.classList.add('btn-restart-game')
     restartButton.innerText = 'RestartGame'
 
     combatAgain.appendChild(restartButton)
