@@ -9,6 +9,7 @@ const btnWater = document.querySelector('#btn-water')
 const btnPlant = document.querySelector('#btn-plant')
 const attackSelect = document.querySelector('#selezionare-attacco')
 const mokeponChoice = document.querySelector('#selezionare-mokepon')
+const sectionMessage = document.querySelector('#messaggi')
 const combatAgain = document.querySelector('#combat-again')
 
 const playerMoke = document.querySelector('#player-moke')
@@ -68,7 +69,7 @@ function mokeponChoicePlayer() {
 
 function mokeponChoiceEnemy () {
 
-    
+    sectionMessage.style.display= 'none'
 
     let mokeponAleatorio = aleatorio(1, 3)
 
@@ -119,6 +120,8 @@ function enemyAttackAleatorio () {
 }
 
 function combat () {
+
+    sectionMessage.style.display= 'grid'
 
     if(playerAttack == enemyAttack) {
 
@@ -177,7 +180,7 @@ function checklifes () {
 
 
 function createMessage (resultCombat) {
-    let sectionMessage = document.querySelector('#messaggi')
+    
     
     let message = document.querySelector('#player')
     let message2 = document.querySelector('#player2')
