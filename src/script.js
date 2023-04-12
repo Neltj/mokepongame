@@ -179,13 +179,10 @@ function checklifes () {
 function createMessage (resultCombat) {
     let sectionMessage = document.querySelector('#messaggi')
     
-    let message = document.createElement('p')
-    let message2 = document.createElement('p')
-    let messageRisult = document.createElement('p')
-    message.classList.add('player')
-    message2.classList.add('player')
-    messageRisult.classList.add('winner')
-
+    let message = document.querySelector('#player')
+    let message2 = document.querySelector('#player2')
+    let messageRisult = document.querySelector('#winner')
+   
     if(mokeponPlayer.textContent == mokepon1 && mokeponEnemyPlayer.textContent == mokepon2) {
         message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${playerAttack}`
         message2.innerHTML = `Il <img src="../img/mokepons_mokepon_capipepo_attack.png"> nemico usa ${enemyAttack}`
@@ -229,10 +226,6 @@ function createMessage (resultCombat) {
 
     messageRisult.innerHTML = resultCombat
 
-
-    sectionMessage.appendChild(message)
-    sectionMessage.appendChild(message2)
-    sectionMessage.appendChild(messageRisult)
 }
 
 
