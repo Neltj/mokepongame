@@ -46,8 +46,7 @@ body {
     background-color: rgba(240, 248, 255, 0.044);
     text-align: center;
     flex-direction: column;
-    padding: 15px 0 30px;
-    margin: 20px auto;
+    padding: 30px 0 30px;
 }
 
 
@@ -73,9 +72,7 @@ body {
    align-items: center;
    width: 110px;
    padding: 10px;
-   border: 1px solid;
    border-radius: 10px;
-   color: whitesmoke;
    
 }
 
@@ -86,7 +83,10 @@ body {
 }
 
 .mokepons label:hover {
-    border-color: transparent;
+    border: .5px solid;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 2px 2px 5px black;
 }
 
 .mokepons .bg-water:hover {
@@ -126,16 +126,15 @@ body {
 }
 
 .btn-start {
-    width: 120px;
-    height: 30px;
+    width: 130px;
+    height: 40px;
     background-color: rgba(0, 255, 255, 0.458);
     border: 1px solid rgb(2, 29, 40);
     font-weight: bold;
     border-radius: 3px;
     font-family: var(--title-font);
-    font-size: 1rem;
-    display: block;
-    margin-left: 50px;
+    font-size: 1.2rem;
+
 }
 
 /* .battle-init {
@@ -154,7 +153,8 @@ body {
 
 .battle-init .btn-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -167,15 +167,25 @@ body {
     background-color: #ffffff00;
     border-color: transparent;
     border-radius: 20px;
-    box-shadow: 10px 5px 20px inset rgb(30, 108, 122);
+    box-shadow: 1px 1px 3px ;
     cursor: pointer;
-    border: 1px solid rgb(1, 16, 19);
+    border: 2px solid rgb(1, 16, 19);
+    background-color:darkslategrey;
  
 }
 
-.battle-init .resultati-messaggi p {
-    text-align: initial;
+.battle-init .btn-container button:nth-child(2) {
+    margin: 0px 20px;
 }
+
+
+.battle-init .resultati-messaggi {
+    margin-top: 100px;
+}
+
+/* .battle-init .resultati-messaggi p {
+    
+} */
 
 .battle-init .resultati-messaggi .player {
     color:seashell;
@@ -198,7 +208,29 @@ body {
 }
 
 .mokepons-lifes {
+    display: flex;
     margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.mokepons-lifes figure {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.mokepons-lifes figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.mokepons-lifes div p{
+    color: rgb(0, 0, 0);
+    font-size: 5rem;
+    font-family: var(--title-font);
+    line-height: 1.3;
+    text-shadow: 1px 1px 5px red;
+    
 }
 
 .mokepons-lifes p {

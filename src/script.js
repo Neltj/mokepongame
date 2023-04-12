@@ -11,6 +11,9 @@ const attackSelect = document.querySelector('#selezionare-attacco')
 const mokeponChoice = document.querySelector('#selezionare-mokepon')
 const combatAgain = document.querySelector('#combat-again')
 
+const playerMoke = document.querySelector('#player-moke')
+const enemyMoke = document.querySelector('#enemy-moke')
+
 
 const restartButton = document.createElement('button')
 
@@ -29,6 +32,8 @@ let mokeponEnemyLife = 5
 attackSelect.style.display='none'
 combatAgain.style.display='none'
 
+ 
+
 
 
 btnMokeponPlayer.addEventListener('click', mokeponChoicePlayer)
@@ -42,10 +47,13 @@ function mokeponChoicePlayer() {
     attackSelect.style.display= 'block'
 
     if(inputLetezio.checked){
+        playerMoke.src = '../img/mokepons_mokepon_hipodoge_attack.png'
         mokeponPlayer.innerHTML = mokepon1
     }else if (inputGanjus.checked) {
+        playerMoke.src = '../img/mokepons_mokepon_capipepo_attack.png'
         mokeponPlayer.innerHTML =  mokepon2
     }else if (inputEnisgas.checked) {
+        playerMoke.src = '../img/mokepons_mokepon_ratigueya_attack.png'
         mokeponPlayer.innerHTML = mokepon3
     }else {
 
@@ -66,12 +74,15 @@ function mokeponChoiceEnemy () {
 
     if(mokeponAleatorio == 1) {
         //Letizio
+        enemyMoke.src = '../img/mokepons_mokepon_hipodoge_attack.png'
         mokeponEnemyPlayer.innerHTML = mokepon1
     }else if (mokeponAleatorio == 2) {
         //Ganjus
+        enemyMoke.src = '../img/mokepons_mokepon_capipepo_attack.png'
         mokeponEnemyPlayer.innerHTML = mokepon2
     }else {
         //Enisgas
+        enemyMoke.src = '../img/mokepons_mokepon_ratigueya_attack.png'
         mokeponEnemyPlayer.innerHTML = mokepon3
     }
 }
@@ -176,23 +187,43 @@ function createMessage (resultCombat) {
     messageRisult.classList.add('winner')
 
     if(mokeponPlayer.textContent == mokepon1 && mokeponEnemyPlayer.textContent == mokepon2) {
-        message.innerHTML = `IL tuo <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${playerAttack}`
-        message2.innerHTML = `IL <img src="../img/mokepons_mokepon_capipepo_attack.png"> usa ${enemyAttack}`
-       
+        message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `Il <img src="../img/mokepons_mokepon_capipepo_attack.png"> nemico usa ${enemyAttack}`
        
     }else if(mokeponPlayer.textContent == mokepon2 && mokeponEnemyPlayer.textContent == mokepon3) {
-        message.innerHTML = `IL tuo <img src="../img/mokepons_mokepon_capipepo_attack.png"> usa ${playerAttack}`
-        message2.innerHTML = `IL <img src="../img/mokepons_mokepon_ratigueya_attack.png"> usa ${enemyAttack}`
+        message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_capipepo_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `Il <img src="../img/mokepons_mokepon_ratigueya_attack.png"> nemico usa ${enemyAttack}`
        
        
     }else if(mokeponPlayer.textContent == mokepon3 && mokeponEnemyPlayer.textContent == mokepon1) {
-        message.innerHTML = `IL tuo <img src="../img/mokepons_mokepon_ratigueya_attack.png"> usa ${playerAttack}`
-        message2.innerHTML = `IL <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${enemyAttack}`
+        message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_ratigueya_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `Il <img src="../img/mokepons_mokepon_hipodoge_attack.png"> nemico usa ${enemyAttack}`
 
-    }else if(mokeponPlayer.textContent == mokeponEnemyPlayer.textContent) {
 
-        message.innerHTML = `Il tuo ${mokeponPlayer.textContent} usa ${playerAttack}.`
-        message2.innerHTML = `Il ${mokeponEnemyPlayer.textContent} nemico usa ${enemyAttack}.`     
+    }else if(mokeponPlayer.textContent == mokepon2 && mokeponEnemyPlayer.textContent == mokepon1) {
+        message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_capipepo_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `Il <img src="../img/mokepons_mokepon_hipodoge_attack.png"> nemico usa ${enemyAttack}`
+
+    }else if(mokeponPlayer.textContent == mokepon3 && mokeponEnemyPlayer.textContent == mokepon2) {
+        message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_ratigueya_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `Il <img src="../img/mokepons_mokepon_capipepo_attack.png"> nemico usa ${enemyAttack}`
+
+    }else if(mokeponPlayer.textContent == mokepon1 && mokeponEnemyPlayer.textContent == mokepon3) {
+        message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${playerAttack}`
+        message2.innerHTML = `Il <img src="../img/mokepons_mokepon_ratigueya_attack.png"> nemico usa ${enemyAttack}`
+
+    } else {
+
+        if(mokeponPlayer.textContent == mokepon1 && mokeponEnemyPlayer.textContent == 'Hypodoge'){
+            message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_hipodoge_attack.png"> usa ${playerAttack}`
+            message2.innerHTML = `Il <img src="../img/mokepons_mokepon_hipodoge_attack.png"> nemico usa ${enemyAttack}`        
+        }else if (mokeponPlayer.textContent == mokepon2 && mokeponEnemyPlayer.textContent == 'Capipepo'){
+            message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_capipepo_attack.png"> usa ${playerAttack}`
+            message2.innerHTML = `Il <img src="../img/mokepons_mokepon_capipepo_attack.png"> nemico usa ${enemyAttack}`        
+        }else if(mokeponPlayer.textContent == mokepon3 && mokeponEnemyPlayer.textContent == 'Ratigueya') {
+            message.innerHTML = `Il tuo <img src="../img/mokepons_mokepon_ratigueya_attack.png"> usa ${playerAttack}`
+            message2.innerHTML = `Il <img src="../img/mokepons_mokepon_ratigueya_attack.png"> nemico usa ${enemyAttack}`        
+        }
     }
     
 
