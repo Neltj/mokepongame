@@ -10,6 +10,7 @@ const btnPlant = document.querySelector('#btn-plant')
 const attackSelect = document.querySelector('#selezionare-attacco')
 const mokeponChoice = document.querySelector('#selezionare-mokepon')
 const sectionMessage = document.querySelector('#messaggi')
+const endGameResults = document.querySelector('.end-game-results')
 const combatAgain = document.querySelector('#combat-again')
 
 const playerMoke = document.querySelector('#player-moke')
@@ -68,8 +69,8 @@ function mokeponChoicePlayer() {
 }
 
 function mokeponChoiceEnemy () {
-
-    sectionMessage.style.display= 'none'
+    endGameResults.style.display = 'none'
+    sectionMessage.style.display = 'none'
 
     let mokeponAleatorio = aleatorio(1, 3)
 
@@ -152,10 +153,10 @@ function combat () {
 function checklifes () {
 
 
+    let choiceMokeponTitle = document.querySelector('.battle-init--title')
     let spanMokeponPlayerLife = document.querySelector('#mokepon-player-life')
     let spanMokeponEnemyLife = document.querySelector('#mokepon-enemy-life')
     let playerMokeponStatus = document.querySelector('#player-mokepon')
-    let enemyMokeponStatus = document.querySelector('#enemy-mokepon')
     let finalResultGame = document.querySelector('#final-result-game')
 
 
@@ -163,15 +164,19 @@ function checklifes () {
     spanMokeponPlayerLife.innerHTML = mokeponPlayerLife
 
     if(mokeponEnemyLife == 0) {
-        enemyMokeponStatus.innerHTML = 'Il mokepon nemico è morto !'
-        finalResultGame.innerHTML = 'HAI VINTO IL COMBATTIMENTO !!!'
+        playerMokeponStatus.innerHTML = 'Il Mokepon nemico è MORTO !'
+        finalResultGame.innerHTML = 'HAI VINTO IL COMBATTIMENTO!!!'
+        endGameResults.style.display = 'flex'
+        choiceMokeponTitle.style.display = 'none'
         combatAgain.style.display = 'block'
         buttonsDisabled()
         restartButtonGame()
 
     } else if(mokeponPlayerLife == 0) {
-        playerMokeponStatus.innerHTML = 'Il tuo mokepon è morto !'
-        finalResultGame.innerHTML = 'HAI PERSO IL COMBATTIMENTO COGLIONE!'
+        playerMokeponStatus.innerHTML = 'Il tuo Mokepon è MORTO !'
+        finalResultGame.innerHTML = 'HAI PERSO IL COMBATTIMENTO!!!'
+        endGameResults.style.display = 'flex'
+        choiceMokeponTitle.style.display = 'none'
         combatAgain.style.display = 'block'
         buttonsDisabled()
         restartButtonGame()
